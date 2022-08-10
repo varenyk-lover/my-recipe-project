@@ -5,7 +5,7 @@ import {HomePage} from '../pages/HomePage/HomePage';
 import {SingleRecipe} from '../pages/SingleRecipe/SingleRecipe';
 import {UsersTips} from '../pages/UsersTips/UsersTips';
 import {FavouriteRecipes} from '../pages/FavouriteRecipes/FavouriteRecipes';
-import StartPageMainComponent from "../components/StartPageMainComponent";
+import StartPageMainComponent from "../components/StartPageMain/StartPageMainComponent";
 
 
 

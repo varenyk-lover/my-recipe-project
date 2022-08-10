@@ -1,0 +1,29 @@
+.recipeListWraper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+
+  .favIconOnCard {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      width: 48px;
+      height: 48px;
+      background: #d54215;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+
+  p {
+    letter-spacing: 0.01071em;
+    line-height: 1.43;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+}

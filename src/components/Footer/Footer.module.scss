@@ -1,0 +1,32 @@
+.footerContentContainer {
+  margin: 35px 65px 50px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: space-between;
+  color: rgba(0,0,0,.65);
+
+  p {
+    margin-bottom: 25px;
+    color: rgba(0,0,0,.65);
+    font-weight: 500;
+  }
+
+  a {
+    color: rgba(0,0,0,.65);
+  }
+}
+
+.footerContainer {
+  border-top: 1px solid rgba(0,0,0,.15);
+}
+.footerPolicyWraper {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+.footerLinksBox {
+  padding: 16px 20px;
+}

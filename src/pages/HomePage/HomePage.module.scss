@@ -1,0 +1,15 @@
+.mainWrap {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+position: relative;
+}
+
+.colorBlock {
+    background-color: #e7ab46;
+    height: 160px;
+    width: 100%;
+position: absolute;
+z-index: 0;
+}
+

@@ -1,9 +1,11 @@
-import { instance } from '../AxiosInstance';
+import {instance} from '../AxiosInstance';
 
-export const fetchRecipes = async () => {
+export const fetchRecipes = async (page) => {
     const response = await instance.get('/recipes/list', {
-        params: {size: '40'},
-
+        params: {
+            from: page,
+            size: '6'
+        },
     });
 
     return response.data;

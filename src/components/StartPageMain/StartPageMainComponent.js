@@ -3,8 +3,8 @@ import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import ButtonBase from '@mui/material/ButtonBase';
 import Typography from '@mui/material/Typography';
-import image1 from '../assets/images/7d148ceaaab14576b56f348124716b61.jpeg';
-import image2 from '../assets/images/download.jpeg';
+import image1 from '../../assets/images/7d148ceaaab14576b56f348124716b61.jpeg';
+import image2 from '../../assets/images/download.jpeg';
 import {Link} from "react-router-dom";
 
 const images = [
