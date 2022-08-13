@@ -1,0 +1,186 @@
+
+.titleContainer {
+  padding: 120px 0 30px;
+
+  .headingContainer {
+    display: flex;
+
+    .favIconContainer {
+      width: 48px;
+      height: 48px;
+      background: #d54215;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 5px;
+
+      .favIcon {
+        fill: rgba(0, 0, 0, 0);
+        stroke: #fff;
+        stroke-width: 2px;
+      }
+    }
+    h1 {
+      padding-left: 20px;
+      margin-top: 5px;
+    }
+  }
+
+  h1, p {
+    text-align: left;
+  }
+
+}
+
+.recipeContainer {
+  li {
+    margin-bottom: 5px;
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+    cursor: pointer;
+    padding-left: 32px;
+    padding-bottom: 5px;
+    position: relative;
+    //background-color: white;
+  }
+
+  li:before {
+    //top: 0;
+    left: 0;
+    content: "";
+    //display: inline-block;
+    position: absolute;
+    background-color: rgba(0, 0, 0, .65);
+    border: 2px solid transparent;
+    border-radius: 10px;
+    width: 20px;
+    height: 20px;
+  }
+
+  li:after {
+    background-color: rgba(0, 0, 0, 0);
+    border-right: solid 2px #fff;
+    border-bottom: solid 2px #fff;
+    top: 2px;
+    left: 6px;
+    width: 8px;
+    height: 12px;
+    transform: rotate(45deg);
+    content: "";
+    //display: inline-block;
+    position: absolute;
+  }
+
+  .mediaAndDetailsContainer {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 30px;
+
+    .videoDetailsContainer {
+      display: flex;
+      padding-bottom: 25px;
+
+      .videoContainer {
+        width: 100%;
+        padding-right: 30px;
+      }
+
+      .servingsContainer {
+        box-sizing: border-box;
+        padding: 60px 23px;
+        width: 250px;
+        height: 300px;
+        border: 2px solid rgba(0, 0, 0, .15);
+        border-radius: 4px;
+        position: relative;
+
+        h3 {
+          padding-bottom: 25px;
+
+          span {
+            font-size: 16px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 400;
+            color: black;
+          }
+
+        }
+
+        .timerIcon {
+          background-color: #fff;
+          background-position: center center;
+          position: absolute;
+          right: -3px;
+          top: -3px;
+        }
+      }
+    }
+
+  }
+
+  .imageContainer {
+    .image {
+      width: 100%;
+      margin-bottom: 25px;
+      border-radius: 4px;
+    }
+  }
+
+  .tagsContainer {
+    button {
+      margin: 10px 20px;
+    }
+  }
+
+}
+
+.instructionsStyle {
+  border-top: 2px solid rgba(0, 0, 0, .15);
+  position: relative;
+
+  h2 {
+    margin: 30px 0;
+  }
+
+}
+
+.indredientsContainer::before {
+  background-color: #d9d9d9;
+  border-radius: 100%;
+  box-shadow: 0 0 0 4px #fff;
+  content: "";
+  display: block;
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  top: -5px;
+  left: 0;
+}
+
+
+.indredientsContainer {
+
+  .unorderedListContainer {
+
+  }
+}
+
+
+.directionsContainer {
+  margin-top: 30px;
+
+  .spoonIconWraper {
+    background-color: #fff;
+    padding-left: 5px;
+    position: absolute;
+    right: 0;
+    top: -19px;
+  }
+
+  .orderedListContainer {
+
+  }
+}
+
+

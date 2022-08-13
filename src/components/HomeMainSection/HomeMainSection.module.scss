@@ -2,24 +2,9 @@
   width: 1000px;
   border: 1px solid black;
   padding: 50px;
+  z-index: 1;
 }
 
-//.recipeListWraper {
-//  display: flex;
-//  flex-wrap: wrap;
-//  justify-content: center;
-//  gap: 20px;
-//  width: 100%;
-//
-//  p {
-//    letter-spacing: 0.01071em;
-//    line-height: 1.43;
-//  }
-//
-//  h3 {
-//    font-size: 20px;
-//  }
-//}
 
 .paginationContainer {
   margin: 20px auto 0;

@@ -5,7 +5,7 @@ const url = 'https://tasty.p.rapidapi.com';
 export const instance = axios.create({
     baseURL: url,
     headers: {
-        'X-RapidAPI-Key': 'e3bc14bf9amsh810a103a9db8d8ep137465jsne496abbca4fb',
+        'X-RapidAPI-Key': 'f55f16dd60msh411c05e60327571p1b55a2jsn7d84bae01dda',
         'X-RapidAPI-Host': 'tasty.p.rapidapi.com',
     },
 });
