@@ -1,16 +1,14 @@
 import React from 'react';
-import Pagination from '@mui/material/Pagination';
-import Stack from '@mui/material/Stack';
-import PaginationItem from '@mui/material/PaginationItem';
+import {Button} from "@mui/material";
 
-import styles from "../HomeMainSection/HomeMainSection.module.scss";
-
-export default function PaginationRounded({page, setPage}) {
-
+import styles from './Pagination.module.scss';
+export default function PaginationComponent({page, setPage}) {
     return (
-        <div>
-            <button onClick={() => setPage(page = page + 6)}>next</button>
-            <button onClick={() => setPage(page = page - 6)}>prev</button>
+        <div className={styles.paginationContainer}>
+            <Button size="medium" variant="contained"
+                    sx={{bgcolor: '#d54215', width: '108px'}} onClick={() => setPage(page = page + 6)}>Next</Button>
+            <Button size="medium" variant="contained"
+                    sx={{bgcolor: '#d54215', width: '108px'}} onClick={() => setPage(page = page - 6)}>Previous</Button>
 
         </div>
     );

@@ -89,7 +89,7 @@ export default function RecipeMainSectionComponent() {
                         )}
                     </div>
 
-                    <h2>Special Equipment</h2>
+                    <h2>Special</h2>
                     <div className={styles.unorderedListContainer}>
                         {recipe.sections && recipe.sections[1]?.components?.map((item) =>
                             <li key={item.id}>{item.raw_text}</li>

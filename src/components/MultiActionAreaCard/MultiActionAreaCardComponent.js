@@ -48,12 +48,11 @@ export default function MultiActionAreaCard({page}) {
                                 <Typography gutterBottom variant="h5" component="div">
                                     <h3>
                                         {item.name}
-
                                     </h3>
                                 </Typography>
                                 <Typography variant="body2" color="text.secondary">
                                     <p>
-                                        {item.description === "" ? <span>This is so tasty that we even couldn't describe! Just tap the banner to learn more. You will definitely love it</span> : <span> {item.description.slice(0, 109)}</span>}
+                                        {item.description === "" ? <span>This is so tasty that we even couldn't describe! Just tap the banner to learn more. You will definitely love it</span> : <span> {item.description.slice(0, 100)}</span>}
                                         ...
                                     </p>
                                 </Typography>

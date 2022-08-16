@@ -4,6 +4,7 @@
   justify-content: center;
   gap: 20px;
   width: 100%;
+  margin-bottom: 30px;
 
   .favIconOnCard {
       position: absolute;
@@ -30,6 +31,7 @@
   p {
     letter-spacing: 0.01071em;
     line-height: 1.43;
+    margin-bottom: 0;
   }
 
   h3 {
@@ -39,5 +41,5 @@
 }
 
 .cardContentWraper{
-  height: 170px;
+  height: 150px;
 }
