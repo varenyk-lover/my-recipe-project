@@ -16,31 +16,6 @@ const url = 'https://tasty.p.rapidapi.com';
 
 export const HeaderComponent = () => {
 
-//         const [recipes, setRecipes] = useState([]);
-//
-//         useEffect(() => {
-//             const res = fetchRecipes();
-//             res.then((data) => setRecipes(data.results));
-//         }, []);
-// /*
-//
-//         const ascSort = () => {
-//             const sortedRecipes = recipes.sort((a, b) =>
-//                 a.name > b.name ? 1 : a.name < b.name ? -1 : 0,
-//             );
-//
-//             setRecipes([...sortedRecipes]);
-//         };
-//
-//         const descSort = () => {
-//             const sortedRecipes = recipes.sort((a, b) =>
-//                 a.name > b.name ? -1 : a.name < b.name ? 1 : 0,
-//             );
-//
-//             setRecipes([...sortedRecipes]);
-//         };
-// */
-//
 
 
     return (
@@ -57,11 +32,7 @@ export const HeaderComponent = () => {
 
 
                 <div className={`${styles.headerCenter} ${styles.flexContainer}`}>
-                    {/*<div className={styles.logoWraper}>*/}
-                    {/*    <Link to="/home">*/}
-                    {/*        <img src={logo}/>*/}
-                    {/*    </Link>*/}
-                    {/*</div>*/}
+
                     <SearchInputComponent/>
                 </div>
 
@@ -75,7 +46,9 @@ export const HeaderComponent = () => {
 
                             <Link to="/favouriterecipes" className={styles.favButtonsBox}>
                                 <div className={styles.favIconContainer}>
+                                    <button>
                                     <img src={favIcon} className={styles.favIcon}/>
+                                    </button>
                                 </div>
                             </Link>
 

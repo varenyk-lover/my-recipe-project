@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 import {Link} from "react-router-dom";
-import {fetchRecipes} from '../../api/requests/RecipesList';
+import {fetchRecipesInput} from '../../api/requests/RecipesList';
 import TextField from '@mui/material/TextField';
 import Stack from '@mui/material/Stack';
 
@@ -20,7 +20,7 @@ export default function SearchInputComponent() {
     const [value, setValue] = React.useState(null);
 
     useEffect(() => {
-        const res = fetchRecipes();
+        const res = fetchRecipesInput();
         res.then((data) => setRecipes(data.results));
     }, []);
 

@@ -1,3 +1,4 @@
+
 .header {
   box-shadow: 0 2px 6px 0 rgb(0 0 0 / 15%);
 
@@ -50,7 +51,12 @@
             justify-content: center;
             margin-top: 5px;
 
+            button {
+              all: unset;
+              cursor: pointer;
+            }
             .favIcon {
+              margin-top: 7px;
               fill: rgba(0,0,0,0);
               stroke: #fff;
               stroke-width: 2px;

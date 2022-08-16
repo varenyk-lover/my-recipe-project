@@ -1,28 +1,11 @@
-
 .titleContainer {
   padding: 120px 0 30px;
 
   .headingContainer {
-    display: flex;
 
-    .favIconContainer {
-      width: 48px;
-      height: 48px;
-      background: #d54215;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-top: 5px;
 
-      .favIcon {
-        fill: rgba(0, 0, 0, 0);
-        stroke: #fff;
-        stroke-width: 2px;
-      }
-    }
     h1 {
-      padding-left: 20px;
+      //padding-left: 20px;
       margin-top: 5px;
     }
   }
@@ -34,44 +17,12 @@
 }
 
 .recipeContainer {
-  li {
-    margin-bottom: 5px;
-    font-family: 'Poppins', sans-serif;
-    list-style: none;
-    cursor: pointer;
-    padding-left: 32px;
-    padding-bottom: 5px;
-    position: relative;
-    //background-color: white;
-  }
 
-  li:before {
-    //top: 0;
-    left: 0;
-    content: "";
-    //display: inline-block;
-    position: absolute;
-    background-color: rgba(0, 0, 0, .65);
-    border: 2px solid transparent;
-    border-radius: 10px;
-    width: 20px;
-    height: 20px;
-  }
-
-  li:after {
-    background-color: rgba(0, 0, 0, 0);
-    border-right: solid 2px #fff;
-    border-bottom: solid 2px #fff;
-    top: 2px;
-    left: 6px;
-    width: 8px;
-    height: 12px;
-    transform: rotate(45deg);
-    content: "";
-    //display: inline-block;
-    position: absolute;
-  }
-
+li {
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 5px;
+  padding-bottom: 5px;
+}
   .mediaAndDetailsContainer {
     display: flex;
     flex-direction: column;
@@ -86,45 +37,87 @@
         padding-right: 30px;
       }
 
-      .servingsContainer {
-        box-sizing: border-box;
-        padding: 60px 23px;
-        width: 250px;
-        height: 300px;
-        border: 2px solid rgba(0, 0, 0, .15);
-        border-radius: 4px;
-        position: relative;
 
-        h3 {
-          padding-bottom: 25px;
-
-          span {
-            font-size: 16px;
-            font-family: 'Poppins', sans-serif;
-            font-weight: 400;
-            color: black;
-          }
-
-        }
-
-        .timerIcon {
-          background-color: #fff;
-          background-position: center center;
-          position: absolute;
-          right: -3px;
-          top: -3px;
-        }
-      }
     }
 
   }
 
   .imageContainer {
+    max-height: 430px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+margin-bottom: 20px;
+
+    .servingsContainer {
+      box-sizing: border-box;
+      padding: 60px 23px;
+      width: 250px;
+      height: 300px;
+      border: 2px solid rgba(0, 0, 0, .15);
+      border-radius: 4px;
+      position: relative;
+      margin: auto 0 auto 30px;
+
+      h3 {
+        padding-bottom: 25px;
+
+        span {
+          font-size: 16px;
+          font-family: 'Poppins', sans-serif;
+          font-weight: 400;
+          color: black;
+        }
+
+      }
+
+      .timerIcon {
+        background-color: #fff;
+        background-position: center center;
+        position: absolute;
+        right: -3px;
+        top: -3px;
+      }
+    }
+
+
+
+    .imageCard {
+      position: relative;
+    }
+    
     .image {
-      width: 100%;
+      display: block;
+      max-height: 430px;
+      //width: 100%;
       margin-bottom: 25px;
       border-radius: 4px;
+      position: relative;
     }
+
+    .favIconOnCard {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      width: 48px;
+      height: 48px;
+      background: #d54215;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      button {
+        all: unset;
+        cursor: pointer;
+
+
+        .favIcon {
+          margin-top: 3px;
+        }
+      }
+    }
+
   }
 
   .tagsContainer {
@@ -140,7 +133,7 @@
   position: relative;
 
   h2 {
-    margin: 30px 0;
+    margin: 30px 0 15px;
   }
 
 }
@@ -162,7 +155,37 @@
 .indredientsContainer {
 
   .unorderedListContainer {
+    li {
+      list-style: none;
+      cursor: pointer;
+      padding-left: 32px;
+      position: relative;
+    }
 
+    li:before {
+      left: 0;
+      content: "";
+      position: absolute;
+      background-color: rgba(0, 0, 0, .65);
+      border: 2px solid transparent;
+      border-radius: 10px;
+      width: 20px;
+      height: 20px;
+      background-color: grey;
+    }
+
+    li:after {
+      background-color: rgba(0, 0, 0, 0);
+      border-right: solid 2px #fff;
+      border-bottom: solid 2px #fff;
+      top: 2px;
+      left: 6px;
+      width: 8px;
+      height: 12px;
+      transform: rotate(45deg);
+      content: "";
+      position: absolute;
+    }
   }
 }
 
@@ -179,6 +202,39 @@
   }
 
   .orderedListContainer {
+    ol {
+      counter-reset: custom;
+      list-style-type: none;
+      padding: 0;
+      //margin: 0px 20px;
+      li {
+        counter-increment: custom;
+        padding-left: 22px;
+        display: flex;
+        align-items: center;
+        margin-left: 15px;
+
+        &:before {
+          left: 0;
+          //content: "";
+          position: absolute;
+          background-color: grey;
+          //border: 2px solid transparent;
+          border-radius: 10px;
+          width: 20px;
+          height: 20px;
+          content: counters(custom, ".") " ";
+          font-size: 13px;
+          margin-right: 10px;
+          color: #fff;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+      }
+    }
+
 
   }
 }

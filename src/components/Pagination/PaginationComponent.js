@@ -4,16 +4,14 @@ import Stack from '@mui/material/Stack';
 import PaginationItem from '@mui/material/PaginationItem';
 
 import styles from "../HomeMainSection/HomeMainSection.module.scss";
-export default function PaginationRounded() {
+
+export default function PaginationRounded({page, setPage}) {
 
     return (
-        <Stack spacing={2} className={styles.paginationContainer}>
-            {/*<Pagination count={10} shape="rounded" />*/}
-            <Pagination count={7} variant="outlined" shape="rounded" />
-        </Stack>
+        <div>
+            <button onClick={() => setPage(page = page + 6)}>next</button>
+            <button onClick={() => setPage(page = page - 6)}>prev</button>
 
-    // <Stack spacing={2}>
-    //     <Pagination count={7} page={page} onChange={()=> setPage(page + 1)} />
-    // </Stack>
+        </div>
     );
 }

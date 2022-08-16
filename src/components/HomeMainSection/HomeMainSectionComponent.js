@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import PaginationControlled from '../Pagination/PaginationComponent';
+import PaginationComponent from '../Pagination/PaginationComponent';
 import MultiActionAreaCard from '../MultiActionAreaCard/MultiActionAreaCardComponent';
 
 
@@ -16,7 +16,7 @@ export default function HomeMainSectionComponent() {
                     page={page}
                 />
 
-            <PaginationControlled setPage={setPage} page={page}/>
+            <PaginationComponent setPage={setPage} page={page}/>
         </div>
     );
 }

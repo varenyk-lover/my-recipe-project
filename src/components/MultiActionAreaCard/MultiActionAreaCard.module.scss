@@ -16,6 +16,15 @@
       display: flex;
       align-items: center;
       justify-content: center;
+
+    button {
+      all: unset;
+      cursor: pointer;
+
+      .favIcon {
+        margin-top: 3px;
+      }
+    }
   }
 
   p {

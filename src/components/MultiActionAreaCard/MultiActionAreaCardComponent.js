@@ -21,11 +21,12 @@ export default function MultiActionAreaCard({page}) {
     useEffect(() => {
         const res = fetchRecipes(page);
         res.then((data) => setRecipes(data.results));
-    }, []);
+    }, [page]);
 
 
 
     return (
+
         <div className={styles.recipeListWraper}>
             {recipes.map((item) => (
                 <Link to={`/recipe/${item.id}`}>
@@ -39,7 +40,9 @@ export default function MultiActionAreaCard({page}) {
                                 alt="green iguana"
                             />
                             <div className={styles.favIconOnCard}>
+                                <button>
                                 <img src={favIcon} className={styles.favIcon}/>
+                                </button>
                             </div>
                             <CardContent className={styles.cardContentWraper}>
                                 <Typography gutterBottom variant="h5" component="div">
