@@ -10,15 +10,7 @@ import homeMainStyles from '../HomeMainSection/HomeMainSection.module.scss';
 import styles from './RecipeMainSection.module.scss';
 import favIcon from "../../assets/images/fav-icon.svg";
 
-export default function RecipeMainSectionComponent() {
-    const [recipe, setRecipe] = useState({});
-
-    useEffect(() => {
-        const res = fetchSingleRecipe(id);
-        res.then((data) => setRecipe(data));
-    }, []);
-
-    const {id} = useParams();
+export default function RecipeMainSectionComponent({recipe}) {
 
 
     return (

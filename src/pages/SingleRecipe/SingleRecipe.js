@@ -13,20 +13,37 @@ import styles from '../HomePage/HomePage.module.scss';
 export const SingleRecipe = () => {
     const [recipe, setRecipe] = useState({});
 
-    useEffect(() => {
-        const res = fetchSingleRecipe(id);
-        res.then((data) => setRecipe(data));
-    }, []);
 
     const {id} = useParams();
 
+    useEffect(() => {
+        const res = fetchSingleRecipe(id);
+        res.then((data) => setRecipe(data));
+    }, [id]);
+
+
+
+//     const [recipe, setRecipe] = useState({
+//         data: {},
+//         loading: false,
+//     });
+//
+//     const {id} = useParams();
+//
+//     useEffect(() => {
+//         setRecipe({ loading: true });
+//         const res = fetchSingleRecipe(id);
+//         res.then((data) => setRecipe({ data: {...data}, loading: false }));
+// }, [id]);
     return (
         <div>
             <HeaderComponent/>
             <div className={styles.mainWrap}>
                 <div className={styles.colorBlock}></div>
                 <NavBarComponent/>
-                <RecipeMainSectionComponent/>
+
+                <RecipeMainSectionComponent recipe={recipe}/>
+
                 <AsideComponent/>
             </div>
             <FooterComponent/>
