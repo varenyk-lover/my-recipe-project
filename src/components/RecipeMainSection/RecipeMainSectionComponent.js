@@ -30,8 +30,8 @@ export default function RecipeMainSectionComponent() {
                 </div>
 
                 <p>
-                    {recipe.description === null ? <span>Let's create something tasty😋</span> :
-                        <span>{recipe.description}</span>}
+                    {recipe.description ? <span>{recipe.description}</span> :
+                        <span>Let's create something tasty😋</span>}
                 </p>
             </div>
 
@@ -89,30 +89,35 @@ export default function RecipeMainSectionComponent() {
                         )}
                     </div>
 
-                    <h2>Special</h2>
-                    <div className={styles.unorderedListContainer}>
-                        {recipe.sections && recipe.sections[1]?.components?.map((item) =>
-                            <li key={item.id}>{item.raw_text}</li>
-                        )}
-                    </div>
-                </div>
 
-                <div className={`${styles.directionsContainer} ${styles.instructionsStyle}`}>
-                    <h2>Directions
-                        <span className={styles.spoonIconWraper}><img src={spoonIcon}/></span>
-                    </h2>
+                    {recipe.sections &&
+                        <div className={styles.unorderedListContainer}>
+                            <h2>Special</h2>
 
-                    <div className={styles.orderedListContainer}>
-                        <ol>
-                            {recipe.instructions?.map((item) =>
-                                <li key={item.id}>{item.display_text}</li>
+                            {recipe.sections[1]?.components?.map((item) =>
+                                <li key={item.id}>{item.raw_text}</li>
                             )}
-                        </ol>
+                        </div>
+
+                    }
+
+                    <div className={`${styles.directionsContainer} ${styles.instructionsStyle}`}>
+                        <h2>Directions
+                            <span className={styles.spoonIconWraper}><img src={spoonIcon}/></span>
+                        </h2>
+
+                        <div className={styles.orderedListContainer}>
+                            <ol>
+                                {recipe.instructions?.map((item) =>
+                                    <li key={item.id}>{item.display_text}</li>
+                                )}
+                            </ol>
+                        </div>
                     </div>
+
                 </div>
 
             </div>
-
         </div>
     );
 }
