@@ -19,6 +19,8 @@ export default function HomeMainSectionComponent() {
         res.then((data) => setRecipes({ data: [...data.results], loading: false }));
     }, [page]);
 
+
+
     return (
         <div className={styles.contentContainer}>
             {recipes.loading ? (

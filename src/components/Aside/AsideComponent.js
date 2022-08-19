@@ -1,7 +1,6 @@
 import React from "react";
 import {Link} from "react-router-dom";
-// import recipeImg from '../../assets/images/french-toast.jpg';
-import {Button} from '@mui/material';
+import {StandartButtonComponent} from '../StandartButton/StandartButtonComponent';
 import styles from './Aside.module.scss';
 
 
@@ -14,9 +13,7 @@ export const AsideComponent = () => {
                 <div className={styles.imageBox}></div>
                 <p>Definitely go with crunchy 🤤🤤 peanut butter...</p>
                 <Link to="/userstips" className={styles.buttonLink}>
-                    <Button size="medium" variant="contained"
-                            sx={{bgcolor: '#d54215',}}>Read more
-                    </Button>
+                    <StandartButtonComponent title="Read more"/>
                 </Link>
             </div>
         </aside>

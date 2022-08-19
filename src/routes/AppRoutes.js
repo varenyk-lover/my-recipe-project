@@ -17,10 +17,10 @@ export const AppRoutes = () => {
 
             <Route path="/home" element={<HomePage/>} />
 
-            {/*  Що тут??? Яке id рецепту?*/}
+
             <Route path="/recipe/:id" element={<SingleRecipe/>} />
 
-            {/*Хочу вести на сторінки, де поки нічого не буде*/}
+
             <Route path="/favouriterecipes" element={<FavouriteRecipes/>} />
             <Route path="/userstips" element={<UsersTips/>} />
 

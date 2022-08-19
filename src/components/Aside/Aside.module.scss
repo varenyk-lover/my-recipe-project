@@ -1,8 +1,14 @@
+
+
 .asideWrap {
   width: 300px;
   padding: 50px 50px 50px 0;
-  //border: 1px solid black;
   z-index: 1;
+
+  @media (max-width: 800px) {
+    padding: 20px 0;
+
+  }
 
   .insideWrap {
     display: flex;
@@ -12,7 +18,7 @@
     background-color: #f5f6ea;
     height: 500px;
     border-radius: 4px;
-    box-shadow: 0px 2px 1px -1px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%);
+    box-shadow: 0 2px 1px -1px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%);
 
     h2 {
       padding-bottom: 30px;

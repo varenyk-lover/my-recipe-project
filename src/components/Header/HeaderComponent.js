@@ -9,7 +9,7 @@ import styles from './Header.module.scss';
 
 import logo from '../../assets/images/logo-icon.svg';
 import favIcon from '../../assets/images/fav-icon.svg';
-
+import {LogInButtonComponent} from "../LogInButton/LogInButtonComponent";
 
 
 const url = 'https://tasty.p.rapidapi.com';
@@ -39,9 +39,7 @@ export const HeaderComponent = () => {
                 <div className={`${styles.headerRight} ${styles.flexContainer}`}>
                     <div className={styles.buttonsBox}>
                         <div className={styles.loginButtonsBox}>
-                            <Button size="medium" variant="contained"
-                                    sx={{bgcolor: 'rgb(247, 175, 49)',}}>Log in
-                            </Button>
+                            <LogInButtonComponent/>
                         </div>
 
                             <Link to="/favouriterecipes" className={styles.favButtonsBox}>

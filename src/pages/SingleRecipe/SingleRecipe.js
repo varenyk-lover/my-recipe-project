@@ -22,19 +22,6 @@ export const SingleRecipe = () => {
     }, [id]);
 
 
-
-//     const [recipe, setRecipe] = useState({
-//         data: {},
-//         loading: false,
-//     });
-//
-//     const {id} = useParams();
-//
-//     useEffect(() => {
-//         setRecipe({ loading: true });
-//         const res = fetchSingleRecipe(id);
-//         res.then((data) => setRecipe({ data: {...data}, loading: false }));
-// }, [id]);
     return (
         <div>
             <HeaderComponent/>

@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
-import { Button } from '@mui/material';
+import React, {useState} from 'react';
+import {Button} from '@mui/material';
+import {StandartButtonComponent} from '../StandartButton/StandartButtonComponent';
 
 import styles from './Pagination.module.scss';
 
-export default function PaginationComponent({ page, setPage }) {
+export default function PaginationComponent({page, setPage}) {
     const [currentPage, setCurrentPage] = useState(1);
 
     const prevHandler = () => {
@@ -18,24 +19,17 @@ export default function PaginationComponent({ page, setPage }) {
 
     return (
         <div className={styles.paginationContainer}>
-            <Button
-                size="medium"
-                variant="contained"
-                sx={{ bgcolor: '#d54215', width: '108px' }}
-                onClick={prevHandler}
-                disabled={currentPage === 1}
-            >
-                Previous
-            </Button>
-            <Button
-                size="medium"
-                variant="contained"
-                sx={{ bgcolor: '#d54215', width: '108px' }}
-                onClick={nextHandler}
-                disabled={currentPage === 5}
-            >
-                Next
-            </Button>
+            <StandartButtonComponent className={styles.buttonStyle}
+                                     title="Previous"
+                                     onPress={prevHandler}
+                                     toDisable={currentPage === 1}
+            />
+
+            <StandartButtonComponent sx={{width: 108,}}
+                                     title="Next"
+                                     onPress={nextHandler}
+                                     toDisable={currentPage === 5}
+            />
         </div>
     );
 }

@@ -1,18 +1,34 @@
 .titleContainer {
   padding: 120px 0 30px;
 
-  .headingContainer {
+  @media (max-width: 800px) {
+  display: flex;
+  flex-direction: column;
+    padding: 20px;
+}
 
+  .headingContainer {
+    p {
+      @media (max-width: 800px) {
+        display: flex;
+        padding: 20px;
+        flex-direction: column;
+      }
+    }
 
     h1 {
       //padding-left: 20px;
       margin-top: 5px;
+      @media (max-width: 800px) {
+        padding: 0 20px;
+      }
     }
   }
 
   h1, p {
     text-align: left;
   }
+
 
 }
 
@@ -35,6 +51,7 @@ li {
       .videoContainer {
         width: 100%;
         padding-right: 30px;
+        border-radius: 4px;
       }
 
 
@@ -48,6 +65,12 @@ li {
     display: flex;
     justify-content: space-around;
 margin-bottom: 20px;
+
+    @media (max-width: 800px) {
+      flex-direction: column;
+      align-items: center;
+      margin: 200px 0;
+    }
 
     .servingsContainer {
       box-sizing: border-box;

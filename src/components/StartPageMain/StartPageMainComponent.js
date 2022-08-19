@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import ButtonBase from '@mui/material/ButtonBase';
@@ -7,92 +7,111 @@ import image1 from '../../assets/images/7d148ceaaab14576b56f348124716b61.jpeg';
 import image2 from '../../assets/images/download.jpeg';
 import {Link} from "react-router-dom";
 
-const images = [
-    {
-        url: image1,
-        title: 'Breakfast',
-        width: '40%',
-        link: '/home',
-    },
-    {
-        url: image2,
-        title: 'Burgers',
-        width: '30%',
-        link: '/recipe/:id',
-    },
+import styles from './StartPageMain.module.scss';
 
-];
-
-const ImageButton = styled(ButtonBase)(({ theme }) => ({
-    position: 'relative',
-    height: 200,
-    [theme.breakpoints.down('sm')]: {
-        width: '100% !important', // Overrides inline-style
-        height: 100,
-    },
-    '&:hover, &.Mui-focusVisible': {
-        zIndex: 1,
-        '& .MuiImageBackdrop-root': {
-            opacity: 0.15,
-        },
-        '& .MuiImageMarked-root': {
-            opacity: 0,
-        },
-        '& .MuiTypography-root': {
-            border: '4px solid currentColor',
-        },
-    },
-}));
-
-const ImageSrc = styled('span')({
-    position: 'absolute',
-    left: 0,
-    right: 0,
-    top: 0,
-    bottom: 0,
-    backgroundSize: 'cover',
-    backgroundPosition: 'center 40%',
-});
-
-const Image = styled('span')(({ theme }) => ({
-    position: 'absolute',
-    left: 0,
-    right: 0,
-    top: 0,
-    bottom: 0,
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    color: theme.palette.common.white,
-}));
-
-const ImageBackdrop = styled('span')(({ theme }) => ({
-    position: 'absolute',
-    left: 0,
-    right: 0,
-    top: 0,
-    bottom: 0,
-    backgroundColor: theme.palette.common.black,
-    opacity: 0.4,
-    transition: theme.transitions.create('opacity'),
-}));
-
-const ImageMarked = styled('span')(({ theme }) => ({
-    height: 3,
-    width: 18,
-    backgroundColor: theme.palette.common.white,
-    position: 'absolute',
-    bottom: -2,
-    left: 'calc(50% - 9px)',
-    transition: theme.transitions.create('opacity'),
-}));
+import {fetchRandomId} from "../../api/requests/RecipesList";
 
 export default function StartPageMainComponent() {
+
+    const [recipes, setRecipes] = useState([]);
+
+
+    useEffect(() => {
+        const res = fetchRandomId();
+        res.then((data) => setRecipes(data.results));
+    }, []);
+
+    const idRecipes = recipes.map((item) => item.id);
+
+    const random = idRecipes[Math.floor(Math.random() * idRecipes.length)];
+
+
+    const images = [
+        {
+            url: image1,
+            title: 'Go to homepage',
+            width: '50%',
+            link: '/home',
+        },
+        {
+            url: image2,
+            title: 'Try random recipe',
+            width: '50%',
+            link: `/recipe/${random}`,
+        },
+
+    ];
+
+    const ImageButton = styled(ButtonBase)(({ theme }) => ({
+        position: 'relative',
+        height: '100vh',
+        [theme.breakpoints.down('sm')]: {
+            width: '100% !important', // Overrides inline-style
+            height: 100,
+        },
+        '&:hover, &.Mui-focusVisible': {
+            zIndex: 1,
+            '& .MuiImageBackdrop-root': {
+                opacity: 0.15,
+            },
+            '& .MuiImageMarked-root': {
+                opacity: 0,
+            },
+            '& .MuiTypography-root': {
+                // border: '1px solid #d54215',
+                backgroundColor: '#c12e01'
+            },
+        },
+    }));
+
+    const ImageSrc = styled('span')({
+        position: 'absolute',
+        left: 0,
+        right: 0,
+        top: 0,
+        bottom: 0,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center 40%',
+    });
+
+    const Image = styled('span')(({ theme }) => ({
+        position: 'absolute',
+        left: 0,
+        right: 0,
+        top: 0,
+        bottom: 0,
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        color: theme.palette.common.white,
+    }));
+
+    const ImageBackdrop = styled('span')(({ theme }) => ({
+        position: 'absolute',
+        left: 0,
+        right: 0,
+        top: 0,
+        bottom: 0,
+        backgroundColor: theme.palette.common.black,
+        opacity: 0.4,
+        transition: theme.transitions.create('opacity'),
+    }));
+
+    const ImageMarked = styled('span')(({ theme }) => ({
+        // height: 3,
+        // width: 18,
+        // backgroundColor: theme.palette.common.white,
+        // position: 'absolute',
+        // bottom: -2,
+        // left: 'calc(50% - 9px)',
+        // transition: theme.transitions.create('opacity'),
+    }));
+
     return (
         <Box sx={{ display: 'flex', flexWrap: 'wrap', minWidth: 300, width: '100%' }}>
             {images.map((image) => (
 
-                <ImageButton
+                <ImageButton className={styles.imageBox}
                     focusRipple
                     key={image.title}
                     style={{
@@ -107,8 +126,12 @@ export default function StartPageMainComponent() {
                         <Typography
                             component="span"
                             variant="subtitle1"
-                            color="inherit"
+                            color="white"
                             sx={{
+                                backgroundColor: '#d54215',
+                                borderRadius: '4px',
+                                fontFamily: 'Poppins',
+                                fontWeight: 500,
                                 position: 'relative',
                                 p: 4,
                                 pt: 2,

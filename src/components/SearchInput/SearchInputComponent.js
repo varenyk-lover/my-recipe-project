@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import axios from 'axios';
+// import axios from 'axios';
 import {Link} from "react-router-dom";
 import {fetchRecipesInput} from '../../api/requests/RecipesList';
 import TextField from '@mui/material/TextField';
@@ -8,12 +8,8 @@ import Stack from '@mui/material/Stack';
 import Autocomplete from '@mui/material/Autocomplete';
 
 
-
-
-// const filter = createFilterOptions();
-
 export default function SearchInputComponent() {
-    const url = 'https://tasty.p.rapidapi.com';
+    // const url = 'https://tasty.p.rapidapi.com';
     const [recipes, setRecipes] = useState([]);
     const [renderRecipes, setRenderRecipes] = useState([]);
     const [input, setInput] = useState('');
@@ -39,7 +35,7 @@ export default function SearchInputComponent() {
     };
 
     return (
-        <Stack spacing={2} sx={{width: 1000}}>
+        <Stack spacing={2} sx={{width: '100%'}}>
             <Autocomplete
                 value={value}
                 onChange={(event, newValue) => {

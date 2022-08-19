@@ -4,6 +4,10 @@
   //border: 1px solid black;
   z-index: 1;
 
+  @media (max-width: 800px) {
+    padding: 20px 0;
+  }
+
   .insideWrap {
     display: flex;
     flex-direction: column;

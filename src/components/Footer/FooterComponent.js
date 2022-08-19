@@ -16,7 +16,7 @@ export const FooterComponent = () => {
                 </div>
 
                 <div>
-                    <p>© Copyright 2022 Allrecipes Corporation. All Rights Reserved.</p>
+                    <p>© Copyright 2022 My Corporation. All Rights Reserved.</p>
                 </div>
 
                 <div className={footerstyles.footerPolicyWraper}>
