@@ -9,7 +9,7 @@ export const AsideComponent = () => {
     return (
         <aside className={styles.asideWrap}>
             <div className={styles.insideWrap}>
-                <h2>Users Tips</h2>
+                <h3>User's Tips</h3>
                 <div className={styles.imageBox}></div>
                 <p>Definitely go with crunchy 🤤🤤 peanut butter...</p>
                 <Link to="/userstips" className={styles.buttonLink}>

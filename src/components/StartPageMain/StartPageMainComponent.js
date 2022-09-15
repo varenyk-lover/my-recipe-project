@@ -25,7 +25,7 @@ export default function StartPageMainComponent() {
 
     const random = idRecipes[Math.floor(Math.random() * idRecipes.length)];
 
-
+console.log(random);
     const images = [
         {
             url: image1,
@@ -98,13 +98,7 @@ export default function StartPageMainComponent() {
     }));
 
     const ImageMarked = styled('span')(({ theme }) => ({
-        // height: 3,
-        // width: 18,
-        // backgroundColor: theme.palette.common.white,
-        // position: 'absolute',
-        // bottom: -2,
-        // left: 'calc(50% - 9px)',
-        // transition: theme.transitions.create('opacity'),
+        // I couldn't delete this const 'cause there is some hide styles from MUI library. Page don't work without it.
     }));
 
     return (

@@ -1,13 +1,15 @@
-import React, {useEffect, useState} from 'react';
+// import React, {useEffect, useState} from 'react';
+import React from 'react';
+
 import axios from 'axios';
 import {fetchRecipes} from '../../api/requests/RecipesList';
 import {Link} from "react-router-dom";
 import SearchInputComponent from "../SearchInput/SearchInputComponent";
-import {Button} from "@mui/material";
+// import {Button} from "@mui/material";
 
 import styles from './Header.module.scss';
 
-import logo from '../../assets/images/logo-icon.svg';
+import logo from '../../assets/images/spoon-big-logo.png';
 import favIcon from '../../assets/images/fav-icon.svg';
 import {LogInButtonComponent} from "../LogInButton/LogInButtonComponent";
 
@@ -22,10 +24,11 @@ export const HeaderComponent = () => {
         <header className={styles.header}>
             <div className={`${styles.headerContainer} ${styles.flexContainer}`}>
                 <div className={`${styles.headerLeft}`}>
-                    {/*<h1>Explore</h1>*/}
                     <div className={styles.logoWraper}>
-                        <Link to="/home">
-                            <img src={logo}/>
+                        <Link to="/">
+                                <h1>lovefood
+                                    <img src={logo} alt="Image of logo"/>
+                                </h1>
                         </Link>
                     </div>
                 </div>

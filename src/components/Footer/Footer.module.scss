@@ -13,10 +13,7 @@
     text-align: center;
   }
 
-  a {
-    color: rgba(0,0,0,.65);
-    text-decoration-line: underline;
-  }
+
 }
 
 .footerContainer {
@@ -31,4 +28,9 @@
 
 .footerLinksBox {
   padding: 16px 20px;
+
+  a {
+    color: rgba(0,0,0,.65);
+    text-decoration-line: underline;
+  }
 }

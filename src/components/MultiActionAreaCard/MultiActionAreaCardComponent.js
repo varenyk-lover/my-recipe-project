@@ -35,7 +35,6 @@ export default function MultiActionAreaCard({page}) {
                             <CardMedia
                                 component="img"
                                 height="180"
-                                // image={recipeImg}
                                 image={item.thumbnail_url}
                                 alt="green iguana"
                             />

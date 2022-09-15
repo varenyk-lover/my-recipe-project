@@ -3,20 +3,22 @@ import {Link} from "react-router-dom";
 
 import styles from '../Header/Header.module.scss';
 import footerstyles from './Footer.module.scss';
-import logo from '../../assets/images/logo-icon.svg';
+import logo from '../../assets/images/spoon-big-logo.png';
 
 export const FooterComponent = () => {
     return (
         <footer className={footerstyles.footerContainer}>
             <div className={footerstyles.footerContentContainer}>
                 <div className={styles.logoWraper}>
-                    <Link to="/home">
-                        <img src={logo}/>
+                    <Link to="/">
+                        <h1>lovefood
+                            <img src={logo} alt="Image of logo"/>
+                        </h1>
                     </Link>
                 </div>
 
                 <div>
-                    <p>© Copyright 2022 My Corporation. All Rights Reserved.</p>
+                    <p>© Copyright 2022. Made by Hanna Horbova.</p>
                 </div>
 
                 <div className={footerstyles.footerPolicyWraper}>
