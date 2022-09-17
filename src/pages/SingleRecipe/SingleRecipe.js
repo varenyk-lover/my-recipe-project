@@ -11,14 +11,18 @@ import HomeMainSectionComponent from "../../components/HomeMainSection/HomeMainS
 import styles from '../HomePage/HomePage.module.scss';
 
 export const SingleRecipe = () => {
-    const [recipe, setRecipe] = useState({});
+    const [recipe, setRecipe] = useState({
+        data: [],
+        loading: false,
+    });
 
 
     const {id} = useParams();
 
     useEffect(() => {
+        setRecipe({loading: true});
         const res = fetchSingleRecipe(id);
-        res.then((data) => setRecipe(data));
+        res.then((data) => setRecipe({data: data, loading: false}));
     }, [id]);
 
 
@@ -29,8 +33,13 @@ export const SingleRecipe = () => {
                 <div className={styles.colorBlock}></div>
                 <NavBarComponent/>
 
-                <RecipeMainSectionComponent recipe={recipe}/>
-
+                {recipe.loading ? (
+                    <h1 style={{marginTop: '200px', marginBottom: '100px'}}>
+                        Loading...
+                    </h1>
+                ) : (
+                    <RecipeMainSectionComponent recipe={recipe.data}/>
+                )}
                 <AsideComponent/>
             </div>
             <FooterComponent/>
