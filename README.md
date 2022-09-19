@@ -1,3 +1,19 @@
+#  About project
+
+This is my first project created on React  —  recipes website https://my-first-react-recipe-project.herokuapp.com
+
+It was made on free API, so here are some restrictions: 5 requests/second, 500 requests/month and some responses are without body. For the last case I've made a message "Oops, there is no recipe. Try to find another one." What about request errors — if you will see, please, write me, and I will create a new account to get more free requests :)
+
+Now are ready 3 pages:
+
+Startpage — here you can try a random recipe or go to the homepage.
+
+Homepage — here you can find recipe in search or click any of recipes cards or use a pagination.
+
+Single recipe page — here you can find all the information about recipe (if there is some body in response).
+
+Sign up and favorites button are not active. But I plan to add this functionality in the future and to fill the page "User's tips" too.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

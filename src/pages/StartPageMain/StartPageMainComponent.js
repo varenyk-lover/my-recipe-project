@@ -58,7 +58,6 @@ console.log(random);
                 opacity: 0,
             },
             '& .MuiTypography-root': {
-                // border: '1px solid #d54215',
                 backgroundColor: '#c12e01'
             },
         },

@@ -34,9 +34,9 @@ export const SingleRecipe = () => {
                 <NavBarComponent/>
 
                 {recipe.loading ? (
-                    <h1 style={{marginTop: '200px', marginBottom: '100px'}}>
+                    <h2 style={{marginTop: '200px', marginBottom: '100px'}}>
                         Loading...
-                    </h1>
+                    </h2>
                 ) : (
                     <RecipeMainSectionComponent recipe={recipe.data}/>
                 )}

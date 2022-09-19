@@ -6,7 +6,7 @@ export const NavBarComponent = () => {
     return (
         <nav className={styles.navBarWrap}>
             <div className={styles.insideWrap}>
-                <h2>Search By Tags</h2>
+                <h3>Search By Tags</h3>
              <div>navbar</div>
             </div>
         </nav>

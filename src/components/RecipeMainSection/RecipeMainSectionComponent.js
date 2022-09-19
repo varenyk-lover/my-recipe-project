@@ -18,7 +18,7 @@ export default function RecipeMainSectionComponent({recipe}) {
             <div>
                 <div className={styles.titleContainer}>
                     <div className={styles.headingContainer}>
-                        <h1>{recipe.name}</h1>
+                        <h2>{recipe.name}</h2>
                     </div>
 
                     <p>
@@ -31,24 +31,24 @@ export default function RecipeMainSectionComponent({recipe}) {
                     <div className={styles.imageContainer}>
 
                         <div className={styles.imageCard}>
-                            <img className={styles.image} src={recipe.thumbnail_url}/>
+                            <img className={styles.image} src={recipe.thumbnail_url} alt="Ready food on plate"/>
                             <div className={styles.favIconOnCard}>
                                 <button>
-                                    <img src={favIcon} className={styles.favIcon}/>
+                                    <img src={favIcon} className={styles.favIcon} alt="Icon of heart"/>
                                 </button>
                             </div>
                         </div>
 
                         <div className={styles.servingsContainer}>
-                            <h3>Prep: {recipe.prep_time_minutes ? <span>{recipe.prep_time_minutes} mins</span> :
-                                <span>no info</span>}</h3>
-                            <h3>Cook: {recipe.cook_time_minutes ? <span>{recipe.cook_time_minutes} mins</span> :
-                                <span>no info</span>}</h3>
-                            <h3>Total: {recipe.total_time_minutes ? <span>{recipe.total_time_minutes} mins</span> :
-                                <span>no info</span>}</h3>
-                            <h3>Servings: {recipe.num_servings ? <span>{recipe.num_servings}</span> :
-                                <span>no info</span>}</h3>
-                            <span className={styles.timerIcon}><img src={timerIcon}/></span>
+                            <h4>Prep: {recipe.prep_time_minutes ? <span>{recipe.prep_time_minutes} mins</span> :
+                                <span>no info</span>}</h4>
+                            <h4>Cook: {recipe.cook_time_minutes ? <span>{recipe.cook_time_minutes} mins</span> :
+                                <span>no info</span>}</h4>
+                            <h4>Total: {recipe.total_time_minutes ? <span>{recipe.total_time_minutes} mins</span> :
+                                <span>no info</span>}</h4>
+                            <h4>Servings: {recipe.num_servings ? <span>{recipe.num_servings}</span> :
+                                <span>no info</span>}</h4>
+                            <span className={styles.timerIcon}><img src={timerIcon} alt="Icon of timer"/></span>
                         </div>
                     </div>
 
@@ -74,7 +74,7 @@ export default function RecipeMainSectionComponent({recipe}) {
 
 
                     <div className={`${styles.indredientsContainer} ${styles.instructionsStyle}`}>
-                        <h2>Ingredients</h2>
+                        <h3>Ingredients</h3>
                         <div className={styles.unorderedListContainer}>
                             {recipe.sections && recipe.sections[0]?.components?.map((item) =>
                                 <li key={item.id}>{item.raw_text}</li>
@@ -84,7 +84,7 @@ export default function RecipeMainSectionComponent({recipe}) {
 
                         {recipe.sections &&
                             <div className={styles.unorderedListContainer}>
-                                <h2>Special</h2>
+                                <h3>Special</h3>
 
                                 {recipe.sections[1]?.components?.map((item) =>
                                     <li key={item.id}>{item.raw_text}</li>
@@ -94,9 +94,9 @@ export default function RecipeMainSectionComponent({recipe}) {
                         }
 
                         <div className={`${styles.directionsContainer} ${styles.instructionsStyle}`}>
-                            <h2>Directions
-                                <span className={styles.spoonIconWraper}><img src={spoonIcon}/></span>
-                            </h2>
+                            <h3>Directions
+                                <span className={styles.spoonIconWraper}><img src={spoonIcon} alt="Icon of spoon"/></span>
+                            </h3>
 
                             <div className={styles.orderedListContainer}>
                                 <ol>
@@ -113,7 +113,7 @@ export default function RecipeMainSectionComponent({recipe}) {
 
             </div>
 
-              :  <h1 style={{ marginTop: '200px', marginBottom: '100px' }}>Ooops, there is no recipe. Try to find another one.</h1>}
+              :  <h2 style={{ marginTop: '200px', marginBottom: '100px' }}>Oops, there is no recipe. Try to find another one.</h2>}
         </div>
     );
 }

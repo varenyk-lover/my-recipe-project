@@ -24,9 +24,9 @@ export default function HomeMainSectionComponent() {
     return (
         <div className={styles.contentContainer}>
             {recipes.loading ? (
-                <h1 style={{ marginTop: '200px', marginBottom: '100px' }}>
+                <h2 style={{ marginTop: '200px', marginBottom: '100px' }}>
                     Loading...
-                </h1>
+                </h2>
             ) : (
                 <MultiActionAreaCard recipes={recipes.data} page={page} />
             )}

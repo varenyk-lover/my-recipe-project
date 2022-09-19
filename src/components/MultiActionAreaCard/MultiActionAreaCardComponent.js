@@ -45,9 +45,9 @@ export default function MultiActionAreaCard({page}) {
                             </div>
                             <CardContent className={styles.cardContentWraper}>
                                 <Typography gutterBottom variant="h5" component="div">
-                                    <h3>
+                                    <h4>
                                         {item.name}
-                                    </h3>
+                                    </h4>
                                 </Typography>
                                 <Typography variant="body2" color="text.secondary">
                                     <p>
