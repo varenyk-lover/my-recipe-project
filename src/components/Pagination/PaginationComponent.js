@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import {Button} from '@mui/material';
 import {StandartButtonComponent} from '../StandartButton/StandartButtonComponent';
 
 import styles from './Pagination.module.scss';
