@@ -5,14 +5,12 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import {CardActionArea} from '@mui/material';
 import favIcon from "../../assets/images/fav-icon.svg";
-import axios from 'axios';
 import {fetchRecipes} from '../../api/requests/RecipesList';
 import {Link} from "react-router-dom";
 
 import styles from './MultiActionAreaCard.module.scss';
 
 
-const url = 'https://tasty.p.rapidapi.com';
 
 export default function MultiActionAreaCard({page}) {
     const [recipes, setRecipes] = useState([]);
@@ -36,11 +34,11 @@ export default function MultiActionAreaCard({page}) {
                                 component="img"
                                 height="180"
                                 image={item.thumbnail_url}
-                                alt="green iguana"
+                                alt="image of recipe"
                             />
                             <div className={styles.favIconOnCard}>
                                 <button>
-                                <img src={favIcon} className={styles.favIcon}/>
+                                <img  alt="icon of heart" src={favIcon} className={styles.favIcon}/>
                                 </button>
                             </div>
                             <CardContent className={styles.cardContentWraper}>

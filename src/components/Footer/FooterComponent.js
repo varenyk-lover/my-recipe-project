@@ -12,7 +12,7 @@ export const FooterComponent = () => {
                 <div className={styles.logoWraper}>
                     <Link to="/">
                         <h1>lovefood
-                            <img src={logo} alt="Image of logo"/>
+                            <img src={logo} alt="company logo"/>
                         </h1>
                     </Link>
                 </div>
