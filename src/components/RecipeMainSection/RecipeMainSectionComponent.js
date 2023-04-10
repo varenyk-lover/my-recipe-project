@@ -1,6 +1,5 @@
-import React, {useEffect, useState} from 'react';
-import {fetchSingleRecipe} from "../../api/requests/RecipesList";
-import {useParams} from "react-router-dom";
+import React from 'react';
+
 import {Button} from "@mui/material";
 import timerIcon from '../../assets/images/timer-icon.svg';
 import spoonIcon from '../../assets/images/spoon-little-logo.svg';
@@ -57,7 +56,7 @@ export default function RecipeMainSectionComponent({recipe}) {
                         {recipe.original_video_url &&
                             <div className={styles.videoDetailsContainer}>
                                 <video className={styles.videoContainer}
-                                       width="auto" height="500" controls preload="auto" autoPlay="" name="media"
+                                       width="auto" height="500" controls preload="auto" autoPlay=""
                                        src={recipe.original_video_url}>
                                 </video>
                             </div>}
