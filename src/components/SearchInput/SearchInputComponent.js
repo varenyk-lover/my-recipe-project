@@ -1,5 +1,4 @@
 import React, {useEffect, useState} from 'react';
-// import axios from 'axios';
 import {Link} from "react-router-dom";
 import {fetchRecipesInput} from '../../api/requests/RecipesList';
 import TextField from '@mui/material/TextField';
@@ -9,30 +8,13 @@ import Autocomplete from '@mui/material/Autocomplete';
 
 
 export default function SearchInputComponent() {
-    // const url = 'https://tasty.p.rapidapi.com';
     const [recipes, setRecipes] = useState([]);
-    const [renderRecipes, setRenderRecipes] = useState([]);
-    const [input, setInput] = useState('');
     const [value, setValue] = React.useState(null);
 
     useEffect(() => {
         const res = fetchRecipesInput();
         res.then((data) => setRecipes(data.results));
     }, []);
-
-    const onChangeHandler = (e) => {
-        setInput(e.target.value);
-
-        const newRecipes = recipes.filter((recipe) => {
-            if (recipe.name.toLowerCase().includes(input.toLowerCase())) {
-                return true;
-            } else {
-                return false;
-            }
-        });
-
-        setRenderRecipes(newRecipes);
-    };
 
     return (
         <Stack spacing={2} sx={{width: '100%'}}>
@@ -71,7 +53,8 @@ export default function SearchInputComponent() {
                 options={recipes}
                 renderInput={(params) => <TextField {...params} label="Search Recipe"/>}
 
-                renderOption={(props, option) => <li {...props}><Link to={`/recipe/${option.id}`}>{option.name}</Link></li>}
+                renderOption={(props, option) => <li {...props}><Link to={`/recipe/${option.id}`}>{option.name}</Link>
+                </li>}
             />
         </Stack>
     );
