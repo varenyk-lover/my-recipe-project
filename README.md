@@ -1,6 +1,7 @@
 #  About project
 
-This is my first project created on React  —  recipes website https://my-first-react-recipe-project.herokuapp.com
+This is my first project created on React  —  recipes website  https://lovefood-recipes.netlify.app/
+Unfortunately, now there are problems with herokuapp.com, so I changed it and deployed my app on netlify.
 
 It was made on free API, so here are some restrictions: 5 requests/second, 500 requests/month and some responses are without body. For the last case I've made a message "Oops, there is no recipe. Try to find another one". What about request errors — if you will see, please, write me, and I will create a new account to get more free requests :)
 
